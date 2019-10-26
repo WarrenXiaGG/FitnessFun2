@@ -8,6 +8,6 @@ public class FighterObject extends GameObject {
         super(sprite, x, y, rowCount, colCount);
     }
     public void draw(Canvas canvas){
-        
+
     }
 }

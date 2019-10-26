@@ -29,6 +29,7 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
     public String controller3Name;
 
     Game currentGame;
+    TankGame tankgame = new TankGame();
 
     public GameSurface(Context context)  {
         super(context);
@@ -47,8 +48,10 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
         this.gameThread = new GameThread(this,surfaceHolder);
         this.gameThread.setRunning(true);
         this.gameThread.start();
-        FightingGame game = new FightingGame();
-        game.init(this);
+        //FightingGame game = new FightingGame();
+        tankgame.init(this);
+        //game.init(this);
+        this.currentGame = tankgame;
     }
 
     public void update()  {

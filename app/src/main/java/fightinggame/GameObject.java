@@ -3,6 +3,8 @@ package fightinggame;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class GameObject {
     public Bitmap image;
     public int width;
@@ -17,8 +19,8 @@ public class GameObject {
         this.image = sprite;
         this.x = x;
         this.y = y;
-        this.width = image.getWidth();
-        this.height = image.getHeight();
+        //this.width = image.getWidth();
+        //this.height = image.getHeight();
         this.rowCount = rowCount;
         this.colCount = colCount;
 
@@ -34,6 +36,10 @@ public class GameObject {
         // createBitmap(bitmap, x, y, width, height).
         Bitmap subImage = Bitmap.createBitmap(image, col * width, row * height, width, height);
         return subImage;
+
+    }
+    public  void update(AtomicInteger c1, AtomicInteger c2, AtomicInteger c3)
+    {
 
     }
 }
