@@ -6,62 +6,62 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
-8-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml
+8-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml
+9-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.BLUETOOTH" />
-11-->[:a5bluetoothlibrary-release:] C:\Users\warre\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:11:5-68
-11-->[:a5bluetoothlibrary-release:] C:\Users\warre\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:11:22-65
+11-->[:a5bluetoothlibrary-release:] C:\Users\kento\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:11:5-68
+11-->[:a5bluetoothlibrary-release:] C:\Users\kento\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:11:22-65
 12    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-12-->[:a5bluetoothlibrary-release:] C:\Users\warre\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:12:5-74
-12-->[:a5bluetoothlibrary-release:] C:\Users\warre\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:12:22-71
+12-->[:a5bluetoothlibrary-release:] C:\Users\kento\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:12:5-74
+12-->[:a5bluetoothlibrary-release:] C:\Users\kento\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:12:22-71
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->[:a5bluetoothlibrary-release:] C:\Users\warre\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:13:5-81
-13-->[:a5bluetoothlibrary-release:] C:\Users\warre\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:13:22-78
+13-->[:a5bluetoothlibrary-release:] C:\Users\kento\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:13:5-81
+13-->[:a5bluetoothlibrary-release:] C:\Users\kento\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:13:22-78
 14
 15    <uses-feature
-15-->[:a5bluetoothlibrary-release:] C:\Users\warre\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:15:5-17:35
+15-->[:a5bluetoothlibrary-release:] C:\Users\kento\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:15:5-17:35
 16        android:name="android.hardware.bluetooth_le"
-16-->[:a5bluetoothlibrary-release:] C:\Users\warre\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:16:9-53
+16-->[:a5bluetoothlibrary-release:] C:\Users\kento\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:16:9-53
 17        android:required="true" />
-17-->[:a5bluetoothlibrary-release:] C:\Users\warre\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:17:9-32
+17-->[:a5bluetoothlibrary-release:] C:\Users\kento\.gradle\caches\transforms-2\files-2.1\ce23bdd8387352d52bd5ddf8f10a9c05\a5bluetoothlibrary-release\AndroidManifest.xml:17:9-32
 18
 19    <application
-19-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:5:5-21:19
+19-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:5:5-21:19
 20        android:name="com.example.bluetooth.A5App"
-20-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:6:13-34
+20-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:6:13-34
 21        android:allowBackup="true"
-21-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:7:13-39
+21-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:7:13-39
 22        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-22-->[com.android.support:support-compat:28.0.0] C:\Users\warre\.gradle\caches\transforms-2\files-2.1\0e32c902cabdffdb59d037ee794746d3\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+22-->[com.android.support:support-compat:28.0.0] C:\Users\kento\.gradle\caches\transforms-2\files-2.1\0e32c902cabdffdb59d037ee794746d3\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 23        android:debuggable="true"
 24        android:icon="@mipmap/ic_launcher"
-24-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:8:13-47
+24-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:8:13-47
 25        android:label="@string/app_name"
-25-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:9:13-45
+25-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:9:13-45
 26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:10:13-58
+26-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:10:13-58
 27        android:supportsRtl="true"
-27-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:11:13-39
+27-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:11:13-39
 28        android:testOnly="true"
 29        android:theme="@style/AppTheme" >
-29-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:12:13-44
+29-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:12:13-44
 30        <activity
-30-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:13:9-20:20
+30-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:13:9-20:20
 31            android:name="com.example.bluetooth.MainActivity"
-31-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:13:19-47
-32            android:screenOrientation="portrait" >
-32-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:14:19-55
+31-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:13:19-47
+32            android:screenOrientation="landscape" >
+32-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:14:19-56
 33            <intent-filter>
-33-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:15:13-19:29
+33-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:15:13-19:29
 34                <action android:name="android.intent.action.MAIN" />
-34-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:16:17-68
-34-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:16:25-66
+34-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:16:17-68
+34-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:16:25-66
 35
 36                <category android:name="android.intent.category.LAUNCHER" />
-36-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:18:17-76
-36-->C:\Users\warre\Documents\activ5-ble-android\app\src\main\AndroidManifest.xml:18:27-74
+36-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:18:17-76
+36-->C:\Users\kento\OneDrive\Desktop\SDHacks2019\fighting game\FitnessFun2\app\src\main\AndroidManifest.xml:18:27-74
 37            </intent-filter>
 38        </activity>
 39    </application>

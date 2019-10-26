@@ -173,7 +173,6 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
             } else if (connectedDevices.size > 1 && connectedDevices[1]?.device?.address == thisDevice.device.address) {
                 print2(thisDevice.device.name, thisValue)
             }*/
-            Log.println(Log.ERROR,"D","SENT");
             gs.manageReceiveIsometric(thisDevice,thisValue);
         }
     }

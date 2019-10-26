@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\warre\\Documents\\activ5-ble-android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "C:\\Users\\kento\\OneDrive\\Desktop\\SDHacks2019\\fighting game\\FitnessFun2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\warre\\.gradle\\caches\\transforms-2\\files-2.1\\45e219f8e304c85f4b407a11f7babe7b\\appcompat-v7-28.0.0\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\kento\\.gradle\\caches\\transforms-2\\files-2.1\\45e219f8e304c85f4b407a11f7babe7b\\appcompat-v7-28.0.0\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
