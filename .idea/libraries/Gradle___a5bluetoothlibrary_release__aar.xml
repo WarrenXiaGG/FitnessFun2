@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: :a5bluetoothlibrary-release:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce23bdd8387352d52bd5ddf8f10a9c05/a5bluetoothlibrary-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce23bdd8387352d52bd5ddf8f10a9c05/a5bluetoothlibrary-release/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
