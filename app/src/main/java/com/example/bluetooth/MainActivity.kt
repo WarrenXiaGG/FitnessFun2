@@ -1,5 +1,6 @@
 package com.example.bluetooth
 
+import GameSurface
 import android.Manifest
 import android.app.Activity
 import android.bluetooth.BluetoothAdapter
@@ -66,7 +67,11 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        A5DeviceManager.initializeDeviceManager(this);
+        A5DeviceManager.setCallback(this)
+        this.setContentView(GameSurface(this));
 
+/*
         requestPermission()
         initRecyclerView()
 
@@ -109,7 +114,11 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
             deviceAdapter.clearDevices()
 
             A5DeviceManager.scanForDevices()
+
         }
+        */
+
+
     }
 
     @Synchronized
