@@ -1,5 +1,9 @@
+package fightinggame;
+
 import android.graphics.Canvas;
 import android.view.SurfaceHolder;
+
+import fightinggame.GameSurface;
 
 public class GameThread extends Thread {
 

@@ -1,3 +1,5 @@
+package fightinggame;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,10 +14,10 @@ import com.example.bluetooth.R;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import a5.com.a5bluetoothlibrary.A5Device;
+import fightinggame.GameObject;
 
 
 public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
-    GameObject player1;
     GameThread gameThread;
     Paint paint = new Paint();
 
@@ -25,6 +27,9 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
     public String controller1Name;
     public String controller2Name;
     public String controller3Name;
+
+    Game currentGame;
+
     public GameSurface(Context context)  {
         super(context);
         paint.setColor(Color.WHITE);
@@ -39,16 +44,15 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
 
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
-        Bitmap sprite = BitmapFactory.decodeResource(this.getResources(), R.drawable.tw02_100704_img_01);
-        player1 = new GameObject(sprite,54,0,1,1);
         this.gameThread = new GameThread(this,surfaceHolder);
         this.gameThread.setRunning(true);
         this.gameThread.start();
+        FightingGame game = new FightingGame();
+        game.init(this);
     }
 
     public void update()  {
-        player1.x += controller1.get()/10;
-        player1.x -= controller2.get()/10;
+        currentGame.update(controller1,controller2,controller3);
     }
 
     public void manageReceiveIsometric(A5Device this_device, int thisValue) {
@@ -64,10 +68,10 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
     @Override
     public void draw(Canvas canvas)  {
         super.draw(canvas);
+        currentGame.render(canvas);
         canvas.drawText("Controller 1: " + controller1.get(),0,10, paint);
         canvas.drawText("Controller 2: " + controller2.get(),0,20, paint);
         canvas.drawText("Controller 3: " + controller3.get(),0,30, paint);
-        this.player1.draw(canvas);
     }
 
     @Override

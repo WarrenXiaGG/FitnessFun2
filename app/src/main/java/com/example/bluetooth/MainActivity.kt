@@ -1,6 +1,6 @@
 package com.example.bluetooth
 
-import GameSurface
+import fightinggame.GameSurface
 import android.Manifest
 import android.app.Activity
 import android.bluetooth.BluetoothAdapter
