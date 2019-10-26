@@ -17,6 +17,7 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
     private var countDownTimer: CountDownTimer? = null
 
     private lateinit var deviceAdapter: DeviceAdapter
+    private lateinit var gs: GameSurface
 
     override fun bluetoothIsSwitchedOff() {
         Toast.makeText(this, "bluetooth is switched off", Toast.LENGTH_SHORT).show()
@@ -46,11 +48,24 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
     }
 
     override fun deviceConnected(device: A5Device) {
+        device.startIsometric();
     }
 
     override fun deviceFound(device: A5Device) {
+        Log.println(Log.ERROR,"devoce",device.device.name)
         deviceAdapter.addDevice(device)
         connectedDevices.add(device)
+        if (device != null) {
+            A5DeviceManager.connect(this, device)
+        }
+        if(gs.controller1Name == null){
+            gs.controller1Name = device.device.address;
+        }else if(gs.controller2Name == null){
+            gs.controller2Name = device.device.address;
+        }else if(gs.controller3Name == null){
+            gs.controller3Name = device.device.address;
+        }
+
     }
 
     override fun deviceDisconnected(device: A5Device) {
@@ -69,9 +84,19 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
         setContentView(R.layout.activity_main)
         A5DeviceManager.initializeDeviceManager(this);
         A5DeviceManager.setCallback(this)
-        this.setContentView(GameSurface(this));
+        gs = GameSurface(this);
+        this.setContentView(gs);
+        requestPermission()
+        initRecyclerView()
 
-/*
+        A5DeviceManager.scanForDevices()
+        //while(this.connectedDevices.size ==0){
+        //}
+        //val device = this.connectedDevices.get(0)
+        //gs.controller1Name = (device as A5Device).device.address;
+        //A5DeviceManager.connect(this, device as A5Device)
+
+        /*
         requestPermission()
         initRecyclerView()
 
@@ -143,11 +168,13 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
 
     private fun manageReceiveIsometric(thisDevice: A5Device, thisValue: Int) {
         if (connectedDevices.isNotEmpty()) {
-            if (connectedDevices[0]?.device?.address == thisDevice.device.address) {
+            /*if (connectedDevices[0]?.device?.address == thisDevice.device.address) {
                 print(thisDevice.device.name, thisValue)
             } else if (connectedDevices.size > 1 && connectedDevices[1]?.device?.address == thisDevice.device.address) {
                 print2(thisDevice.device.name, thisValue)
-            }
+            }*/
+            Log.println(Log.ERROR,"D","SENT");
+            gs.manageReceiveIsometric(thisDevice,thisValue);
         }
     }
 
@@ -160,8 +187,8 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
         deviceAdapter = DeviceAdapter(this)
 
         val linearLayoutManager = LinearLayoutManager(this)
-        recyclerView.layoutManager = linearLayoutManager
-        recyclerView.adapter = deviceAdapter
+        //recyclerView.layoutManager = linearLayoutManager
+        //recyclerView.adapter = deviceAdapter
     }
 
     private fun requestPermission() {
