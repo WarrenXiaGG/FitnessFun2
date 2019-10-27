@@ -21,6 +21,7 @@ import fightinggame.GameObject;
 
 
 public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
+    boolean fight = true;
     GameThread gameThread;
     Paint paint = new Paint();
 
@@ -56,8 +57,10 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
         this.gameThread.start();
         FightingGame game = new FightingGame();
         tankgame.init(this);
+        MusicGame gameM = new MusicGame();
+        gameM.init(this);
         game.init(this);
-        this.currentGame = game;
+        this.currentGame = fight?game:gameM;
     }
 
     public void update()  {
@@ -79,9 +82,6 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
     public void draw(Canvas canvas)  {
         super.draw(canvas);
         currentGame.render(canvas);
-        canvas.drawText("Controller 1: " + controller1.get(),0,60, paint);
-        canvas.drawText("Controller 2: " + controller2.get(),0,70, paint);
-        canvas.drawText("Controller 3: " + controller3.get(),0,80, paint);
     }
 
     @Override
