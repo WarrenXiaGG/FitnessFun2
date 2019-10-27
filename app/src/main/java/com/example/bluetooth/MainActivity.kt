@@ -180,6 +180,7 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
     fun deviceSelected(device: A5Device) {
         this.device = device
         Toast.makeText(this, "device selected: " + device.device.name, Toast.LENGTH_SHORT).show()
+        //This is where we definitly know that it has connected to a device
     }
 
     private fun initRecyclerView() {

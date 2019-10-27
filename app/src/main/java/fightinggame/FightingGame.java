@@ -38,6 +38,7 @@ public class FightingGame extends Game{
         player1 = new FighterObject(sprite,54,0,1,1);
         ai = new ComputerFighter(sprite, 54, 0, 1, 1);    //just default
         testIndex = 0;
+        player1Health = 1000;   //health of player1
         paint.setColor(Color.RED);
         player1HealthBar.setColor(Color.GREEN);
     }
@@ -90,6 +91,9 @@ public class FightingGame extends Game{
 
         if(!movement.equals("blocked") && aiActionCounter == 0){
             movement = "hurt";
+            Log.d("DAMAGE", "AI's damage is " + ai.damage);
+            player1Health -= ai.damage;
+            Log.d("HEALTH", "P1 health is " + player1Health);
             aiActionCounter = -1;
         }
         if(aiActionCounter > 0){
