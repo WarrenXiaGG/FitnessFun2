@@ -48,11 +48,11 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
     }
 
     override fun deviceConnected(device: A5Device) {
+        GameSurface.controllerFound = true;
         device.startIsometric();
     }
 
     override fun deviceFound(device: A5Device) {
-        Log.println(Log.ERROR,"devoce",device.device.name)
         deviceAdapter.addDevice(device)
         connectedDevices.add(device)
         if (device != null) {
@@ -88,6 +88,7 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
         this.setContentView(gs);
         requestPermission()
         initRecyclerView()
+
 
         A5DeviceManager.scanForDevices()
         //while(this.connectedDevices.size ==0){
@@ -179,7 +180,7 @@ class MainActivity : AppCompatActivity(), A5BluetoothCallback {
 
     fun deviceSelected(device: A5Device) {
         this.device = device
-        Toast.makeText(this, "device selected: " + device.device.name, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "device selected: " + device.device.name, Toast.LENGTH_SHORT).show()
         //This is where we definitly know that it has connected to a device
     }
 

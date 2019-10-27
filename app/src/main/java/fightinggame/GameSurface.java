@@ -6,8 +6,10 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
 
 import com.example.bluetooth.R;
 
@@ -24,6 +26,7 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
     AtomicInteger controller1 = new AtomicInteger();
     AtomicInteger controller2 = new AtomicInteger();
     AtomicInteger controller3 = new AtomicInteger();
+    public static boolean controllerFound = false;
     public String controller1Name;
     public String controller2Name;
     public String controller3Name;
@@ -55,6 +58,7 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
     }
 
     public void update()  {
+
         currentGame.update(controller1,controller2,controller3);
     }
 
