@@ -19,7 +19,6 @@ public class FightingGame extends Game{
     FighterObject player1;
     ComputerFighter ai;
     long player1Health; //health of player 1
-    long aiHealth;  //health of ai
     int detectConuter=-1;  //counter for detectSequence
     final int DETECT_MAX = 5;   //how long after we should start look for 0
     String movement;    //can be punch, defense, or grad
@@ -29,6 +28,7 @@ public class FightingGame extends Game{
     int testDifference;
     int previousForce;
     int aiActionCounter = -1;
+    int originalForce = 0;
     boolean countered = false;
 
     @Override
@@ -57,11 +57,10 @@ public class FightingGame extends Game{
             aiActionCounter = 53;
             movement = "ai punched";
         }
-        player1.x = c1.get();
         int force = c1.get();   //the force player presses
-
         if(force > 0 && previousForce == 0){
-            detectConuter = 22;
+            detectConuter = 22;//refractory period
+            originalForce = c1.get();
         }
         if(detectConuter > 0){
             detectConuter--;
@@ -70,6 +69,11 @@ public class FightingGame extends Game{
             {
                 Log.println(Log.ERROR,"ds","Punched");
                 movement = "punch";
+                //decreases the health of the ai(opponent)
+                ai.health -= originalForce;
+                Log.d("GETFORCE", "ORIGINAL FORCE: "+ originalForce);
+                Log.d("AI", "AI HEALTH: "+ ai.health);
+                //refactory period when pucnching and defending//
             }
             //otherwise
             else
@@ -96,7 +100,7 @@ public class FightingGame extends Game{
 
         //if the force is over the low threshold, then it is attacking
 
-        //5% chance of activating, grad another person and deals damage
+        //5% chance of activating, grabs another person and deals damage
 
         //if the health goes into negative, that person is dead, another player win
 
@@ -108,7 +112,7 @@ public class FightingGame extends Game{
      * 1. attack successfully, if other player's defense is off during the interval
      * 2. attack partially fail, if other player's defense is on
      */
-    public void attack(FighterObject attacker, long attackForce)
+   /* public void attack(FighterObject attacker, long attackForce)
     {
         //within the attack interval, the defense is on, attack fails
         long interval;  //attack time occurs mimus current time
@@ -116,15 +120,15 @@ public class FightingGame extends Game{
         //punch success;
         if(attacker == player1)
         {
-            aiHealth -= attackForce;
+            ai.health -= attackForce;
         }
-    }
+    }*/
 
     /*detectSequence
      *if the force goes down to 0, it would be label as a punch
      * otherwise, it's a defense
      */
-    public void detectSequence(Integer force)
+    /*public void detectSequence(Integer force)
     {
         //increment deterCounter
         detectConuter++;
@@ -142,5 +146,5 @@ public class FightingGame extends Game{
                 movement = "";
             }
         }
-    }
+    }*/
 }

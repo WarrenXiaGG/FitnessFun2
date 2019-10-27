@@ -3,7 +3,7 @@ package fightinggame;
 import android.graphics.Bitmap;
 
 public class ComputerFighter extends GameObject{
-    public int health = 100;
+    public int health = 1000;
     public int counter =100;
     public ComputerFighter(Bitmap sprite, int x, int y, int rowCount, int colCount) {
         super(sprite, x, y, rowCount, colCount);
