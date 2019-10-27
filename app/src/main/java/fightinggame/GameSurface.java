@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -38,6 +39,8 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback{
         super(context);
         paint.setColor(Color.WHITE);
         paint.setStyle(Paint.Style.FILL);
+
+        Typeface type = Typeface.createFromAsset(context.getAssets(),"fonts/Old School Adventures.ttf");
 
         // Make Game Surface focusable so it can handle events.
         this.setFocusable(true);

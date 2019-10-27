@@ -643,6 +643,16 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable attack1_0
+drawable attack1_1
+drawable attack2_0
+drawable attack2_1
+drawable attack2_2
+drawable general_attack1
+drawable general_attack2__kick_
+drawable general_charge
+drawable general_ready
+drawable ground
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable notification_action_background
@@ -657,6 +667,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable sky
+drawable sprite_0ready
+drawable sprite_1ready
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable tw02_100704_img_01
@@ -866,6 +879,7 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw good
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

@@ -1,4 +1,4 @@
-#Sat Oct 26 20:02:35 PDT 2019
+#Sun Oct 27 09:51:13 PDT 2019
 base.0=C\:\\Users\\stove\\Documents\\GitHub\\FitnessFun2\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
