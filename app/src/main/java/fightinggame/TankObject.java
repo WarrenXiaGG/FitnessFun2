@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TankObject extends GameObject {
     int angle = 0;
     int speed = 5;
+    int[][][] map;
     Paint paint = new Paint();
     public TankObject(Bitmap sprite, int x, int y, int rowCount, int colCount) {
         super(sprite, x, y, rowCount, colCount);
